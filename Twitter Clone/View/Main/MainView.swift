@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @State var width = UIScreen.main.bounds.width - 90
+    @State var x = -UIScreen.main .bounds.width - 90
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                ZStack(alignment: Alignment(horizontal: .leading, vertical: .center), content: {
+                    VStack{
+                        TopBar()
+                        Home()
+                    }
+                    SlideMenu()
+                        .offset(x: x)
+                })
+            }
+            .navigationBarHidden(true)
+            .navigationBarTitle("")
+        }
+        
     }
 }
 

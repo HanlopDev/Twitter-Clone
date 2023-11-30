@@ -9,7 +9,21 @@ import SwiftUI
 
 struct SearchUserCell: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Image("logo")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 44, height: 44)
+                .clipShape(Circle())
+            
+            VStack(alignment: .leading) {
+                Text("Hanlop")
+                    .fontWeight(.heavy)
+                Text("Hanlop_Dev")
+            }
+            
+            Spacer(minLength: 0)
+        }
     }
 }
 
